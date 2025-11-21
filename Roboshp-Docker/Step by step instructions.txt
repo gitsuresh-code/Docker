@@ -39,7 +39,7 @@ docker build -t sql:v1 .
 docker run -d --network roboshop --name sql sql:v1 
 
 
-Reload SQL data follow these steps::
+Reload SQL data --- follow these steps::
 
 docker cp schema.sql sql:/schema.sql
 docker cp master-data.sql sql:/master-data.sql
@@ -66,6 +66,7 @@ curl http://localhost:8080/health #to check the app running status
 
 
 Payment issue fixed via below chagnes in frontend
+go to static/js/controller.js
 ==> static --js --controller.js  (need to comment below line)
 //$scope.data.uniqueid = 'foo';
 
