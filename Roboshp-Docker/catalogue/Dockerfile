@@ -1,8 +1,8 @@
 #base image 
 FROM node:20
 
-#it will create and point to this directory
-WORKDIR /opt/app
+#it will create directory and change directory to server
+WORKDIR /opt/server
 
 #to copy the files to current directory
 COPY package.json .
