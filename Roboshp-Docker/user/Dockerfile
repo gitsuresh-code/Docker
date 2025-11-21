@@ -2,7 +2,7 @@
 FROM node:20
 
 #it will create and point to this directory
-WORKDIR /opt/app
+WORKDIR /opt/server
 
 #to copy the files to current directory
 COPY package.json .
