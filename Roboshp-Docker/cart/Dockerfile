@@ -2,7 +2,7 @@
 FROM node:20
 
 #it will create and point to this directory
-WORKDIR /opt/app
+WORKDIR /opt/server
 
 #to copy the files to current directory
 COPY package.json .
@@ -12,9 +12,9 @@ COPY *.js .
 RUN npm install
 
 #to set environment variable and connect to mongodb
-ENV REDIS_host="true" \
-    MONGO_URL="mongodb://mongodb:27017/users" \
-    REDIS_URL="redis://redis:6379"
+ENV REDIS_HOST="redis" \
+    CATALOGUE_HOST="catalogue" \
+    CATALOGUE_PORT="8080"
 
 #to run the container
 CMD ["node", "server.js"]
